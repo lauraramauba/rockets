@@ -1,8 +1,8 @@
 class Rocket {
     code: string;
-    thrusters: any;
+    thrusters: number;
 
-    constructor(code:string, thrusters:any) {
+    constructor(code:string, thrusters:number) {
         this.code = code;
         this.thrusters = thrusters;
     }
