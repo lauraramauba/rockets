@@ -1,4 +1,11 @@
 var rocketOne = new Rocket("32WESSDS");
+rocketOne.addThruster(10);
+rocketOne.addThruster(30);
+rocketOne.addThruster(80);
 var rocketTwo = new Rocket("LDSFJA32");
-var thrustersRocketOne = new Thrusters(3, [10, 30, 80]);
-var thrustersRocketTwo = new Thrusters(6, [30, 40, 50, 50, 30, 10]);
+rocketTwo.addThruster(30);
+rocketTwo.addThruster(40);
+rocketTwo.addThruster(50);
+rocketTwo.addThruster(50);
+rocketTwo.addThruster(30);
+rocketTwo.addThruster(10);

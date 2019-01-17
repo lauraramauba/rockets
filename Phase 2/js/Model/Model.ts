@@ -1,17 +1,20 @@
 class Rocket {
     code: string;
+    thrusters:Thruster[]=new Array();
 
     constructor(code:string) {
         this.code = code;
     }
+
+    addThruster(power:number){
+        this.thrusters.push(new Thruster(power));
+    }
 }
 
-class Thrusters {
-    amount: number;
-    maxPower: any;
+class Thruster {
+    maxPower: number;
 
-    constructor(amount:number, maxPower:any) {
-        this.amount = amount;
+    constructor(maxPower:number) {
         this.maxPower = maxPower;
     }
 }
