@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="img/icon16.png" sizes="16x16" />
+    <title>ROCKETS</title>
+</head>
+<body>
+
+    <header>
+
+        <h1>ROCKETS</h1>
+
+    </header>
+
+    <main>
+
+        <button id="make-green-btn" type="button" class="create-rocket">Make a Rocket</button>
+
+        <div id="rocket-one" class="rocket-one hide">
+
+            <h2>ROCKET 32WESSDS</h2>
+
+            <div class="rocket-main">
+
+                <div class="green-controls">
+
+                    <button id="green-accelerate" type="button" class="accelerate-rocket"></button>
+                    <button id="green-brake" type="button" class="brake-rocket"></button>
+
+                </div>
+                <div class="rocket">
+                    <img src="img/greenrocket.svg">
+                </div>
+                <div class="progress">
+
+                    <div id="greenBar10" class="progress-bar"></div>
+                    <div id="greenBar9" class="progress-bar"></div>
+                    <div id="greenBar8" class="progress-bar"></div>
+                    <div id="greenBar7" class="progress-bar"></div>
+                    <div id="greenBar6" class="progress-bar"></div>
+                    <div id="greenBar5" class="progress-bar"></div>
+                    <div id="greenBar4" class="progress-bar"></div>
+                    <div id="greenBar3" class="progress-bar"></div>
+                    <div id="greenBar2"  class="progress-bar"></div>
+                    <div id="greenBar1" class="progress-bar"></div>
+
+                </div>
+            </div>
+            <div class="green-rocket-info">
+
+                <button id="green-btn-info" type="button" class="print-info">Show Speed</button>
+                <div id="green-info-container" class="info-container hide">
+                    <div class="pixel-border">
+                        <div id="rocket-one-info" class="info"></div>
+                    </div> 
+                </div>       
+
+            </div>
+
+        </div>
+
+        <button id="make-red-btn" type="button" class="create-rocket">Make a Rocket</button>
+
+        <div id="rocket-two" class="rocket-two hide">
+            
+            <h2>ROCKET LDSFJA32</h2>
+
+            <div class="rocket-main">
+
+                <div class="red-controls">
+
+                    <button id="red-accelerate" type="button" class="accelerate-rocket"></button>
+                    <button id="red-brake" type="button" class="brake-rocket"></button>
+
+                </div>
+                <div class="rocket">
+                        <img src="img/redrocket.svg">
+                </div>
+                <div class="progress">
+
+                    <div id="redBar10" class="progress-bar"></div>
+                    <div id="redBar9" class="progress-bar"></div>
+                    <div id="redBar8" class="progress-bar"></div>
+                    <div id="redBar7" class="progress-bar"></div>
+                    <div id="redBar6" class="progress-bar"></div>
+                    <div id="redBar5" class="progress-bar"></div>
+                    <div id="redBar4" class="progress-bar"></div>
+                    <div id="redBar3" class="progress-bar"></div>
+                    <div id="redBar2"  class="progress-bar"></div>
+                    <div id="redBar1" class="progress-bar"></div>
+
+                </div>
+            </div>
+            <div class="red-rocket-info">
+
+                <button id="red-btn-info" type="button" class="print-info">Show Speed</button>
+                <div id="red-info-container" class="info-container hide">
+                        <div class="pixel-border">
+                            <div id="rocket-two-info" class="info"></div>
+                        </div> 
+                    </div> 
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <div id="btn-all-rockets-speed">
+        <button id="allRocketsSpeed" type="button" class="print-info-all hide">All Rockets Speed</button>
+    </div>
+
+    <script src="js/Model/Model.js"></script>
+    <script src="js/Controller/Controller.js"></script>
+    <script src="js/View/View.js"></script>
+</body>
