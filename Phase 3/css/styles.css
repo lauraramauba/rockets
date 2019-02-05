@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.hide {
+    display: none;
+}
+
+.green {
+    background-color: #00cc00;
+}
+
+.green-two {
+    background-color: #33cc33;
+}
+
+.green-three {
+    background-color: #66ff33;
+}
+
+.green-four {
+    background-color: #99ff33;
+}
+
+.green-yellow {
+    background-color: #ccff33;
+}
+
+.yellow {
+    background-color: #ffff00;
+}
+
+.yellow-orange {
+    background-color: #ffcc00;
+}
+
+.orange {
+    background-color: #ff9933;
+}
+
+.orange-red {
+    background-color: #ff6600;
+}
+
+.red {
+    background-color: #ff0000;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px;
+    font-size: 4.5rem;
+    color: #74be9b;
+    text-shadow: 9px 9px 0 #ff6f69;
+    letter-spacing: 15px;
+}
+
+h2 {
+    font-size: 1rem;
+    margin: 20px;
+    text-align: center;
+    color: #404040;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    height: 50vh;
+}
+
+.rocket img {
+    min-width: 100px;
+    max-width: 150px;
+    margin: 15px;
+}
+
+.rocket-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.green-controls, 
+.red-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+
+/***GREEN CREATE ROCKET***/
+#make-green-btn, 
+.green-rocket-info .print-info {
+    background: url("../img/greenwidenotpressed.svg") no-repeat scroll center 0 transparent;
+}
+#make-green-btn:active, 
+.green-rocket-info .print-info:active {
+    background: url("../img/greenwidepressed.svg") no-repeat scroll center bottom transparent;
+}
+
+/***GREEN ACCELERATE***/
+.green-controls .accelerate-rocket {
+    background: url("../img/greenboostnotpressed.svg") no-repeat scroll 0 0 transparent;
+}
+.green-controls .accelerate-rocket:active,
+.green-max-accelerate {
+    background: url("../img/greenboostpressed.svg") no-repeat scroll center bottom transparent;
+}
+
+/***GREEN BRAKE***/
+.green-controls .brake-rocket {
+    background: url("../img/greenbrakenotpressed.svg") no-repeat scroll 0 0 transparent;
+}
+.green-controls .brake-rocket:active,
+.green-max-brake {
+    background: url("../img/greenbrakepressed.svg") no-repeat scroll center bottom transparent;
+}
+
+/***RED CREATE ROCKET***/
+#make-red-btn, 
+.red-rocket-info .print-info {
+    background: url("../img/redwidenotpressed.svg") no-repeat scroll center 0 transparent;
+}
+#make-red-btn:active, 
+.red-rocket-info .print-info:active{
+    background: url("../img/redwidepressed.svg") no-repeat scroll center bottom transparent;
+}
+
+/***RED ACCELERATE***/
+.red-controls .accelerate-rocket {
+    background: url("../img/redboostnotpressed.svg") no-repeat scroll 0 0 transparent;
+}
+.red-controls .accelerate-rocket:active,
+.red-max-accelerate {
+    background: url("../img/redboostpressed.svg") no-repeat scroll center bottom transparent;
+}
+
+/***RED BRAKE***/
+.red-controls .brake-rocket {
+    background: url("../img/redbrakenotpressed.svg") no-repeat scroll 0 0 transparent;
+}
+.red-controls .brake-rocket:active,
+.red-max-brake {
+    background: url("../img/redbrakepressed.svg") no-repeat scroll center bottom transparent;
+}
+
+/****ALL ROCKETS SPEED BUTTON BG***/
+.print-info-all {
+    background: url("../img/allspeednotpressed.svg") no-repeat scroll 0 0 transparent;
+}
+.print-info-all:active {
+    background: url("../img/allspeedpressed.svg") no-repeat scroll center bottom transparent;
+}
+#btn-all-rockets-speed {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.create-rocket {
+    cursor: pointer;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    width: 186px;
+    height: 58px;
+    word-spacing: -6px;
+    text-align: center;
+}
+
+.print-info {
+    cursor: pointer;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    width: 140px;
+    height: 45px;
+    word-spacing: -6px;
+    text-align: center;
+    font-size: 0.75rem;
+    margin: 10px 0 10px 0;
+}
+
+.print-info-all {
+    cursor: pointer;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+    width: 200px;
+    height: 56px;
+    word-spacing: -6px;
+    text-align: center;
+    font-size: 0.7rem;
+    margin: 30px 0 10px 0;
+    color: #333;
+}
+
+
+#make-green-btn, 
+.green-rocket-info .print-info {
+    color: #31684e;
+}
+
+#make-red-btn, 
+.red-rocket-info .print-info {
+    color: #800400;
+}
+
+.create-rocket:active, 
+.print-info:active, 
+.print-info-all:active {
+    padding-top: 10px;
+}
+
+.accelerate-rocket, 
+.brake-rocket, 
+.green-max-accelerate,
+.green-max-brake,
+.red-max-accelerate,
+.red-max-brake {
+    cursor: pointer;
+    width: 44px;
+    height: 50px;
+    border: none;
+    margin: 5px 20px 5px 5px;
+}
+
+/***INFO BORDER***/
+
+.info {
+    font-size: 0.8rem;
+}
+
+.green-rocket-info,
+.red-rocket-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.pixel-border, .progress { 
+    width: 150px; 
+    float: left;
+    border-left: 5px solid #404040;
+    border-right: 5px solid #404040;
+    position: relative; 
+    -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    margin-left: 15px;
+}
+
+.progress {
+    margin-left: 30px;
+    width: 80px;
+}
+
+.pixel-border .info, 
+.progress .progress-bar{ 
+    display: block;
+    color: #404040;
+    padding: 10px; 
+    margin: -5px 0; 
+    border-top: 5px solid #404040; 
+    border-bottom: 5px solid #404040; 
+}
+
+.progress .progress-bar{
+    padding: 4px;
+}
+
+.pixel-border::before, 
+.pixel-border::after,
+.pixel-border .info::before, 
+.pixel-border .info::after,
+.progress::before,
+.progress::after,
+.progress .progress-bar::before,
+.progress .progress-bar::after{ 
+    content: ''; 
+    width: 5px; 
+    height: 5px; 
+    display: block; 
+    position: absolute;   
+    background: #404040; 
+}
+.pixel-border::before{ top: -2.5px; left: -2.5px; }
+.pixel-border::after{ top: -2.5px; right: -2.5px; }
+.pixel-border .info::before{ bottom: -2.5px; left: -2.5px; }
+.pixel-border .info::after{ bottom: -2.5px; right: -2.5px; }
+.progress::before{ top: -2.5px; left: -2.5px; }
+.progress::after{ top: -2.5px; right: -2.5px; }
+.progress .progress-bar::before{ bottom: -2.5px; left: -2.5px; }
+.progress .progress-bar::after{ bottom: -2.5px; right: -2.5px; }
+
+/****MEDIA QUERIES****/
+
+@media (max-width: 480px) {
+    h1 {
+        text-align: center;
+        margin: 40px 25px;
+        font-size: 2.5rem;
+        letter-spacing: 9px;
+        text-shadow: 6px 6px 0 #ff6f69;
+    }
+
+	main {
+        
+        height: 100%;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .create-rocket {
+        margin: 30px 0;
+    }
+
+}
