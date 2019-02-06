@@ -3,31 +3,6 @@
 let makeGreen = document.getElementById("make-green-btn");
 let makeRed = document.getElementById("make-red-btn");
 let allRocketsBtn = document.getElementById("allRocketsSpeed");
-
-function showRocketOne() {
-    makeGreen.classList.add('hide');
-    document.getElementById("rocket-one").classList.remove('hide');
-    showAllRocketsSpeed();
-}
-
-function showRocketTwo() {
-    makeRed.classList.add('hide');
-    document.getElementById("rocket-two").classList.remove('hide');
-    showAllRocketsSpeed();
-}
-
-function showAllRocketsSpeed() {
-    if(makeGreen.classList.contains('hide') && makeRed.classList.contains('hide')) {
-        allRocketsBtn.classList.remove('hide');
-    }
-}
-
-makeGreen.addEventListener('click', showRocketOne);
-makeRed.addEventListener('click', showRocketTwo);
-
-
-//SHOW SPEED
-
 let greenInfo = document.getElementById("rocket-one-info");
 let redInfo = document.getElementById("rocket-two-info");
 let greenBtnInfo = document.getElementById("green-btn-info");
@@ -35,6 +10,30 @@ let redBtnInfo = document.getElementById("red-btn-info");
 let btnAllInfo = document.getElementById("allRocketsSpeed");
 let greenInfoContainer = document.getElementById("green-info-container");
 let redInfoContainer = document.getElementById("red-info-container");
+let greenAccelerate = document.getElementById("green-accelerate");
+let greenBrake = document.getElementById("green-brake");
+let redAccelerate = document.getElementById("red-accelerate");
+let redBrake = document.getElementById("red-brake");
+
+makeGreen.addEventListener('click', () => {
+    makeGreen.classList.add('hide');
+    document.getElementById("rocket-one").classList.remove('hide');
+    showAllRocketsSpeed();
+});
+
+makeRed.addEventListener('click', () => {
+    makeRed.classList.add('hide');
+    document.getElementById("rocket-two").classList.remove('hide');
+    showAllRocketsSpeed();
+});
+
+function showAllRocketsSpeed() {
+    if(makeGreen.classList.contains('hide') && makeRed.classList.contains('hide')) {
+        allRocketsBtn.classList.remove('hide');
+    }
+}
+
+//SHOW SPEED
 
 greenBtnInfo.onclick = function() {
     if(greenInfoContainer.classList.contains('hide')) {
@@ -75,11 +74,6 @@ btnAllInfo.onclick = function() {
 }
 
 //ACCELERATE, BRAKE AND POWER BAR
-
-let greenAccelerate = document.getElementById("green-accelerate");
-let greenBrake = document.getElementById("green-brake");
-let redAccelerate = document.getElementById("red-accelerate");
-let redBrake = document.getElementById("red-brake");
 
 greenAccelerate.onclick = function() {
     rocketOne.accelerate();
@@ -132,4 +126,3 @@ redBrake.onclick = function() {
         redBrake.classList.add('red-max-brake');
     }
 }
-
